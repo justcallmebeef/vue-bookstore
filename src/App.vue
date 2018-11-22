@@ -1,28 +1,39 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Bookstore coming soon!"/>
+    <Search />
+    <Card v-for="book in books" :key="book.id" :book="book"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Search from './components/Search.vue';
+import Card from './components/Card.vue'
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
 
 export default {
   name: 'app',
+   data() {
+    return {
+      books: [],
+    };
+  },
+
+  mounted() {
+    axios.get("http://localhost:8082/api/books")
+    .then(response => this.books = response.data)
+  }, 
   components: {
-    HelloWorld
+    Search,
+    Card
   }
 }
+
+
 </script>
 
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
