@@ -20,7 +20,7 @@ export default {
   },
 
   mounted() {
-    axios.get("http://localhost:8082/api/books")
+    axios.get("https://dry-hamlet-97544.herokuapp.com/api/books")
     .then(response => this.books = response.data)
   }, 
   components: {
