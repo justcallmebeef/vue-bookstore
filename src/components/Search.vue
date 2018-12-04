@@ -5,7 +5,7 @@
         <b-navbar-brand>Vue Bookstore</b-navbar-brand>
         <b-collapse is-nav id="nav_text_collapse">
             <b-nav-form>
-              <b-form-input class="mr-sm-2" type="text" placeholder="Search"></b-form-input>
+              <!-- <b-form-input class="mr-sm-2" type="text" placeholder="Search"></b-form-input> -->
             </b-nav-form>
         </b-collapse>
     </b-navbar>

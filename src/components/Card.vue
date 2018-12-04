@@ -10,7 +10,7 @@
     <p class="card-text">
       {{book.subtitle}}
     </p>
-    <b-button href="#" variant="primary">Go somewhere</b-button>
+    <!-- <b-button href="#" variant="primary">Go somewhere</b-button> -->
   </b-card>
 </div>
 </template>
@@ -24,5 +24,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+div {
+  margin: 1em;
+}
 </style>
